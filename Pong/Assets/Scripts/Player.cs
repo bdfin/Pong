@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow)) 
         {
-            if (transform.localPosition.y > topMovementLimit) 
+            if (transform.localPosition.y >= topMovementLimit) 
             {
                 transform.localPosition = new Vector3(transform.localPosition.x, topMovementLimit, transform.localPosition.z);
             }
@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
-            if (transform.localPosition.y < bottomMovementLimit)
+            if (transform.localPosition.y <= bottomMovementLimit)
             {
                 transform.localPosition = new Vector3(transform.localPosition.x, bottomMovementLimit, transform.localPosition.z);
             }
